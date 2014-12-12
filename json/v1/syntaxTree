@@ -46,7 +46,7 @@
 				"nodes": {
 					"type":"array",
 					"items": {
-						"$ref": "node"
+						"$ref": "#"
 					}
 				}
 			}
