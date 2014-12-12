@@ -26,6 +26,7 @@
 	},
 	"definitions": {
 		"node": {
+			"id":"node"
 			"type":"object",
 			"name": "node",
 			"required": ["key","alias"],
@@ -44,10 +45,8 @@
 				},
 				"nodes": {
 					"type":"array",
-					"properties":{
-						"items": {
-							"$ref": "#/definitions/node"
-						}
+					"items": {
+						"$ref": "node"
 					}
 				}
 			}
