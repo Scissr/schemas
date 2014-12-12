@@ -13,9 +13,11 @@
 		"nodes": {
 			"type":"array",
 			"description": "Collection of nodes",
-			"items": {
-				"$ref": "#/definitions/node"
-			} 
+			"properties":{
+				"items": {
+					"$ref": "#/definitions/node"
+				}
+			}, 
 		},
 		"parser": {
 			"type":"string",
