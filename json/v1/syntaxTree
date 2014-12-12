@@ -45,9 +45,11 @@
 				},
 				"nodes": {
 					"type":"array",
-					"items": {
-						"$ref": "#"
-					}
+					"items": [
+						{
+							"$ref": "node"
+						}
+					]
 				}
 			}
 		}
