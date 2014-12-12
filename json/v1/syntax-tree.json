@@ -4,7 +4,7 @@
 	"title": "Scissr Syntax Tree",
 	"name": "syntaxTree",
 	"required": ["formatter","nodes","parser"],
-	"id": "http://schemas.scissr.co/v1/syntax-tree.json",
+	"id": "http://schemas.scissr.co/json/v1/syntax-tree.json",
 	"properties":{
 		"formatter": {
 			"type":"string",
