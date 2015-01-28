@@ -14,7 +14,8 @@
 			"type":"array",
 			"items": {
 				"$ref": "#/definitions/node"
-			}
+			},
+			"minItems": 1
 		},
 		"parser": {
 			"type":"string"
@@ -44,8 +45,7 @@
 			"required": ["resolver","type","alias"],
 			"properties":{
 				"resolver": {
-					"type":"string",
-					"enum": ["string","bool","int","number","date"]
+					"type":"string"
 				},
 				"type": {
 					"type": "object",
