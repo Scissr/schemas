@@ -27,7 +27,7 @@
 			"properties": {
 				"name": {
 					"type": "string",
-					"enum": ["string","bool","int","number","date"],
+					"enum": ["object","string","bool","int","number","date"],
 					"default": "string"
 				},
 				"isArray": {
