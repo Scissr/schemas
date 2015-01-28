@@ -42,7 +42,7 @@
 		},
 		"node": {
 			"type":"object",
-			"required": ["resolver","type","alias"],
+			"required": ["type","alias"],
 			"properties":{
 				"resolver": {
 					"type":"string"
