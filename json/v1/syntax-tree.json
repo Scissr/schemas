@@ -1,59 +1,62 @@
 {
-	"type":"object",
-	"$schema": "http://json-schema.org/draft-04/schema#",
 	"title": "Scissr Syntax Tree",
-	"name": "syntaxTree",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type":"object",
 	"required": ["formatter","nodes","parser"],
 	"id": "http://schemas.scissr.co/json/v1/syntax-tree.json",
-	"properties":{
+	"properties": {
+		"required": ["parser", "formatter", "nodes"],
 		"formatter": {
 			"type":"string",
-			"description": "Identifier for specific format generation",
-			"required":false
+			"enum": ["json","xml"]
 		},
 		"nodes": {
 			"type":"array",
-			"description": "Collection of nodes",
-			"required":false,
-			"properties":{
-				"items": {
-					"type":"array",
-					"$ref": "#/definitions/node",
-					"required":false
-				}
+			"items": {
+				"$ref": "#/definitions/node"
 			}
 		},
 		"parser": {
-			"type":"string",
-			"description": "Parser name",
-			"required":false
+			"type":"string"
 		}
 	},
 	"definitions": {
+		"nodeType": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string",
+					"enum": ["string","bool","int","number","date"],
+					"default": "string"
+				},
+				"isArray": {
+					"type": "boolean",
+					"default": false
+				},
+				"length": {
+					"type": "integer",
+					"default": 1
+				}
+			}
+		},
 		"node": {
-			"id":"node",
 			"type":"object",
-			"name": "node",
-			"required": ["key","alias"],
+			"required": ["resolver","type","alias"],
 			"properties":{
-				"key": {
+				"resolver": {
 					"type":"string",
-					"description": "Node unique identifier"
+					"enum": ["string","bool","int","number","date"]
 				},
 				"alias": {
-					"type":"string",
-					"description": "Friendly name for node"
+					"type":"string"
 				},
 				"data": {
-					"type":"array",
-					"description": "Additional node attributes"
+					"type":"object"
 				},
 				"nodes": {
 					"type":"array",
 					"items": {
-						"type":"array",
-						"$ref": "#/definitions/node",
-						"required":false
+						"$ref": "#/definitions/node"
 					}
 				}
 			}
