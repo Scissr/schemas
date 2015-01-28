@@ -47,6 +47,10 @@
 					"type":"string",
 					"enum": ["string","bool","int","number","date"]
 				},
+				"type": {
+					"type": "object",
+					"$ref": "#/definitions/node"
+				},
 				"alias": {
 					"type":"string"
 				},
