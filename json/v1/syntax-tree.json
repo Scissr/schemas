@@ -19,6 +19,9 @@
 		},
 		"parser": {
 			"type":"string"
+		},
+		"data": {
+			"type":"object"
 		}
 	},
 	"definitions": {
