@@ -27,6 +27,7 @@
 	"definitions": {
 		"nodeType": {
 			"type": "object",
+			"required": ["name","isArray","length"],
 			"properties": {
 				"name": {
 					"type": "string",
