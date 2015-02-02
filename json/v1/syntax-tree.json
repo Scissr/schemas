@@ -27,7 +27,7 @@
 	"definitions": {
 		"node": {
 			"type":"object",
-			"required": ["type","alias"],
+			"required": ["baseType","type","isArray","count","alias"],
 			"properties":{
 				"type": {
 					"type":"string"
