@@ -25,11 +25,14 @@
 		}
 	},
 	"definitions": {
-		"nodeType": {
-			"type": "object",
-			"required": ["name","isArray","length"],
-			"properties": {
-				"name": {
+		"node": {
+			"type":"object",
+			"required": ["type","alias"],
+			"properties":{
+				"type": {
+					"type":"string"
+				},
+				"baseType": {
 					"type": "string",
 					"enum": ["object","string","bool","int","number","date"],
 					"default": "string"
@@ -38,22 +41,9 @@
 					"type": "boolean",
 					"default": false
 				},
-				"length": {
+				"count": {
 					"type": "integer",
 					"default": 1
-				}
-			}
-		},
-		"node": {
-			"type":"object",
-			"required": ["type","alias"],
-			"properties":{
-				"resolver": {
-					"type":"string"
-				},
-				"type": {
-					"type": "object",
-					"$ref": "#/definitions/nodeType"
 				},
 				"alias": {
 					"type":"string"
