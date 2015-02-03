@@ -51,6 +51,9 @@
 				"data": {
 					"type":"object"
 				},
+				"value": {
+					"type":"string"
+				},
 				"nodes": {
 					"type":"array",
 					"items": {
