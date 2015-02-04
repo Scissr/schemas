@@ -2,11 +2,10 @@
 	"title": "Scissr Syntax Tree",
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"type":"object",
-	"required": ["formatter","nodes","parser"],
+	"required": ["generator","nodes","parser"],
 	"id": "http://schemas.scissr.co/json/v1/syntax-tree.json",
 	"properties": {
-		"required": ["parser", "formatter", "nodes"],
-		"formatter": {
+		"generator": {
 			"type":"string",
 			"enum": ["json","xml"]
 		},
